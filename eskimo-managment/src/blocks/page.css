@@ -20,5 +20,10 @@ button{
     cursor: pointer;
 }
 .page__menu{
+  width: 100%;
   padding: 40px 80px;
+}
+.title{
+  font-size: 24px;
+  margin-bottom: 24px;
 }

@@ -1,0 +1,37 @@
+.menu__counter-container{
+    width: 100%;
+    background-color: white;
+    padding: 40px   ;
+    border-radius: 32px;
+    margin-bottom: 32px;
+}
+.menu__counter-title{
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+.menu__counter{
+    font-size: 48px;
+}
+.menu__container{
+    width: 100%;
+    padding: 40px;
+    background-color: white;
+    border-radius: 32px;
+}
+.menu__container-intro{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.menu__table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.menu__table-header{
+    text-align: left;
+}
+.menu__table-category{
+    border-bottom: 2px solid rgb(163, 163, 163);
+    padding: 0 0 16px;
+}

@@ -6,11 +6,24 @@
     align-items: center;
     padding: 40px 20px;
     color: white;
+    border-radius: 0 32px 32px 0;
 }
 .sidebar__logo{
     width: 50%;
+    margin-bottom: 10px;
 }
 .sidebar__title{
     font-size: 22px;
     text-align: center;
+    margin-bottom: 40px;
+}
+.sidebar__nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.sidebar__button{
+    color: inherit;
+    padding: 8px 16px;
 }
