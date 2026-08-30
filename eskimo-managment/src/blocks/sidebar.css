@@ -1,0 +1,16 @@
+.sidebar{
+    background-color: #ED3136;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    color: white;
+}
+.sidebar__logo{
+    width: 50%;
+}
+.sidebar__title{
+    font-size: 22px;
+    text-align: center;
+}
