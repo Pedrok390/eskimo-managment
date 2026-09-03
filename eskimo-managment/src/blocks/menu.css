@@ -17,6 +17,7 @@
     padding: 40px;
     background-color: white;
     border-radius: 32px;
+    
 }
 .menu__container-intro{
     display: flex;
@@ -24,14 +25,45 @@
     width: 100%;
     margin-bottom: 16px;
 }
+.menu__container-button{
+    padding: 12px 32px; 
+    border-radius: 50px;
+    background-color: #ED3136;
+    color: white;
+    display: block;
+}
+.menu__table-container{
+    max-height: 440px;
+    overflow-y: auto;
+}
 .menu__table{
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0 16px;
+}
+.menu__table thead{
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
 }
 .menu__table-header{
+    text-align: left;
+}
+.menu__table-product{
     text-align: left;
 }
 .menu__table-category{
     border-bottom: 2px solid rgb(163, 163, 163);
     padding: 0 0 16px;
+}
+.menu__table-image-container{
+    width: 80px;
+    height: 80px;
+}
+.menu__table-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }

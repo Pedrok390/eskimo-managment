@@ -1,0 +1,111 @@
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.2);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.popup__container{
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 16px;
+    position: relative;
+}
+.popup__title{
+    margin-bottom: 32px;
+}
+.popup__close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(32px, -32px);
+    font-size: 32px;
+    color: white;
+}
+
+/* ADD PRODUCT POPUP */
+
+.addproduct__form{
+    height: 80vh;
+    overflow-y: auto;
+}
+.addproduct__title{
+    margin-bottom: 16px;
+}
+
+.addproduct__grid{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 32px;
+}
+.addproduct__container--ingredients{
+    grid-area: ingredients;
+}
+.addproduct__container--image{
+    grid-area: image;
+}
+.addproduct__image-preview-container{
+    width: 160px;
+    height: 160px;
+}
+.addproduct__image-preview{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.addproduct__label{
+    margin-bottom: 16px;
+}
+.addproduct__input, .addproduct__textarea{
+    margin-bottom: 24px;
+    width: 100%;
+}
+.addproduct__textarea{
+    height: 150px;
+}
+.addproduct__container--available{
+    display: flex;
+}
+.addproduct__checkbox-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.addproduct__checkbox-label{
+    margin-bottom: 16px;
+}
+.addproduct__checkbox-input{
+    margin-right: 8px;
+}
+.addproduct__container--portions .addproduct__input{
+    width: 10%;
+    margin-right: 16px;
+}
+.addproduct__table{
+    width: 100%;
+}
+.addproduct__table td{
+    padding: 8px;
+}
+.addproduct__table-firstcollumn{
+    width: 20%;
+}
+.addproduct__container--available input{
+    margin-right: 8px;
+}
+.addproduct__submit{
+    font-size: 18px;
+    padding: 12px 96px; 
+    border-radius: 50px;
+    background-color: #ED3136;
+    color: white;
+    margin: auto;
+    margin-top: 32px;
+    display: block;
+}
