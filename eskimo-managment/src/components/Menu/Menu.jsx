@@ -25,7 +25,6 @@ export default function Menu(props){
         else{
             setProductSearch(products)
         }
-        console.log(productSearch)
     }
     return (
         <>

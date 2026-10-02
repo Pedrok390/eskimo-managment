@@ -44,6 +44,7 @@ function App() {
       .getProducts()
       .then((products) => {
         setProducts(products);
+        console.log(products)
       })
       .catch((error) => {
         console.error(error);
@@ -87,10 +88,8 @@ function App() {
   return api
     .updateProduct(productId, productData)
     .then((updatedProduct) => {
-      console.log("RETORNO UPDATE:", updatedProduct);
 
       setProducts((currentProducts) => {
-        console.log("ANTES:", currentProducts);
 
         const newProducts = currentProducts.map((product) =>
           product._id === updatedProduct._id
@@ -98,7 +97,6 @@ function App() {
             : product
         );
 
-        console.log("DEPOIS:", newProducts);
 
         return newProducts;
       });

@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function AddProduct(props){
     const {handleCreateProduct, categories, product, type} = props
-    const categoryList = ["Nova Categoria", ...categories]
+    const categoryList = ["Nova Categoria", ...[...new Set(categories.map((category) => category))].sort((a,b) => a.localeCompare(b, 'pt-BR'))]
     const [currentCategory, setCurrentCategory] = useState("")
     const allergenOptions = [ "Amendoim",
         "Aveia",
@@ -245,27 +245,11 @@ export default function AddProduct(props){
         }
 
         try {
-            console.log(
-            "Original:",
-            file.size / 1024 / 1024,
-            "MB"
-            );
-
-            const compressedFile = await compressImage(
-            file,
-            1200,
-            0.8
-            );
-
-            console.log(
-            "Comprimida:",
-            compressedFile.size / 1024 / 1024,
-            "MB"
-            );
+            const compressedFile = await compressImage(file,1200,0.8);
 
             setForm((current) => ({
-            ...current,
-            image: compressedFile
+                ...current,
+                image: compressedFile
             }));
 
             setImagePreview(
@@ -441,10 +425,10 @@ export default function AddProduct(props){
                     </div>
                     <div className="addproduct__container">
                         <p className="addproduct__label">Categoria</p>
-                        <select id="category" name="category" className="addproduct__input" value={currentCategory} onChange={(e) => {handleChange(e); setCurrentCategory(e.target.value)}} placeholder="Escolha uma Categoria" >
+                        <select id="category" name="category" className="addproduct__input" value={form.category} onChange={(e) => {handleChange(e); setCurrentCategory(e.target.value)}} placeholder="Escolha uma Categoria" >
                                 <option></option>
                             {categoryList.map((category) => (
-                                <option key={category} value={category}>{category}</option>
+                                <option key={category} value={category} >{category}</option>
                             ))}
                         </select>
                         {currentCategory === "Nova Categoria" &&<input type="text" className="addproduct__input" value={form.category} name="category" onChange={handleChange} placeholder="Insira uma nova categoria" required></input>}
@@ -518,7 +502,8 @@ export default function AddProduct(props){
                         <option value="unidade">unidade</option>
                     </select>
                 </div>
-                {form.nutrition.portion.amount !== '' && <div className="addproduct__container">
+                {form.nutrition.portion.amount !== '' && 
+                <div className="addproduct__container">
                     <p className="addproduct__label">Valores Nutricionais</p>
                     <table className="addproduct__table">
                         <thead>
